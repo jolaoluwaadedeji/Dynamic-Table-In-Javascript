@@ -1,0 +1,21 @@
+<! DOCTYPE>
+<html>
+    <head>
+        <title>
+            Dynamic Table
+        </title>
+        <link href="Dynamic.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="DynamicTable.js"></script>
+    </head>
+    <body onload="Search()">
+        <div id="searchDiv">
+            <form class="example" onsubmit="return false">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div id="tableDiv"></div>
+        
+    </body>
+</html>
