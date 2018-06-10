@@ -47,8 +47,5 @@ function DisplayUsersOnTable(users){
     table.appendChild(tbody);
     tableDiv.appendChild(table);
     var element = document.getElementsByTagName("thead")[0].setAttribute("class","th");
-    console.log(element);
-    // element.setAttribute("class",'th')
-    
-
+    console.log(element);   
 }
