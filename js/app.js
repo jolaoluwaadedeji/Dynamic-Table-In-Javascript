@@ -8,14 +8,14 @@ function Search(){
         var jsonResponse = xhr.response;
         var users = JSON.parse(jsonResponse);
         console.log(users);
-        DisplayUsersOnTable(users);
+        DisplayTable(users);
     })
     xhr.send();
     xhr.onerror = function(err){
         console.log(err);
     }
 }
-function DisplayUsersOnTable(users){
+function CreateTable(users){
     var tableDiv = document.querySelector("#tableDiv")
     table = document.createElement("table");
     var header = document.createElement("thead");
@@ -48,4 +48,10 @@ function DisplayUsersOnTable(users){
     tableDiv.appendChild(table);
     var element = document.getElementsByTagName("thead")[0].setAttribute("class","th");
     console.log(element);   
+}
+function DisplayTable(users){
+    CreateTable(users)
+    $(document).ready( function () {
+        $('table').DataTable();
+    } );
 }
